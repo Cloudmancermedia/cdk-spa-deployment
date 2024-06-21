@@ -11,7 +11,7 @@ export class CdkSpaDeploymentStack extends Stack {
   constructor(scope: Construct, id: string, props?: StackProps) {
     super(scope, id, props);
 
-    const domainName = 'cloudmancermedia.com'
+    const domainName = 'domainname.com'
 
     const hostedZone = new HostedZone(
       this,
@@ -34,7 +34,7 @@ export class CdkSpaDeploymentStack extends Stack {
       this,
       'FEBucket',
       {
-        bucketName: 'cloudmancer-media-website-hosting',
+        bucketName: 'your-bucket-name',
         removalPolicy: RemovalPolicy.DESTROY,
         autoDeleteObjects: true
       }
